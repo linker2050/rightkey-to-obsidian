@@ -30,12 +30,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         const obsidianUri = `obsidian://new?vault=${encodeURIComponent(result.obsidianPath)}&name=${encodeURIComponent(fullFileName)}&content=${encodeURIComponent(content)}`;
         
         // 在当前标签页打开 URI
-        chrome.tabs.update(tab.id, { url: obsidianUri }, () => {
-          // 500ms 后返回原页面
-          setTimeout(() => {
-            chrome.tabs.update(tab.id, { url: url });
-          }, 500);
-        });
+        chrome.tabs.update(tab.id, { url: obsidianUri });
       } else {
         // 如果未配置 Obsidian 路径，打开选项页面
         chrome.runtime.openOptionsPage();
