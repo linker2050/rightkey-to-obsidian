@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RightKey to Obsidian Pro 设置</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #7C3AED;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #6D28D9;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .success {
+      background-color: #D1FAE5;
+      color: #065F46;
+    }
+    .error {
+      background-color: #FEE2E2;
+      color: #991B1B;
+    }
+    .help-text {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #F3F4F6;
+      border-radius: 4px;
+    }
+    .help-text h3 {
+      margin-top: 0;
+    }
+    .help-text ol {
+      padding-left: 20px;
+    }
+    code {
+      background: #E5E7EB;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .version {
+      font-size: 12px;
+      color: #666;
+      text-align: right;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RightKey to Obsidian Pro 设置</h1>
+    <div class="form-group">
+      <label for="obsidianPath">Obsidian Vault 名称：</label>
+      <input type="text" id="obsidianPath" placeholder="例如：MyNotes">
+      <small style="color: #666; display: block; margin-top: 5px;">请输入 vault 的名称（不是完整路径）</small>
+    </div>
+    <button id="save">保存设置</button>
+    <div id="status" class="status"></div>
+
+    <div class="help-text">
+      <h3>如何找到 Vault 名称？</h3>
+      <ol>
+        <li>打开 Obsidian 应用程序</li>
+        <li>点击左下角的设置图标（⚙️）</li>
+        <li>在设置中选择"关于"选项</li>
+        <li>在"库位置"中可以看到完整路径</li>
+        <li>只需要输入最后一个文件夹的名称</li>
+      </ol>
+      <p>例如，如果您的完整路径是：</p>
+      <code>/Users/用户名/Documents/Obsidian/MyNotes</code>
+      <p>那么只需要输入：<code>MyNotes</code></p>
+      <p class="note" style="margin-top: 15px; padding: 10px; background: #FEF3C7; border-radius: 4px;">
+        <strong>注意：</strong> 请确保 Obsidian 已安装并且启用了 URI 功能。第一次使用时，系统可能会询问是否允许打开 Obsidian。
+      </p>
+    </div>
+    <div class="version">版本 2.0</div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html> 
